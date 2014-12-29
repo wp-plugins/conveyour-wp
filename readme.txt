@@ -13,7 +13,7 @@ Integrate ConveYour into your Wordpress site. Works great with CoursePress and G
 
 ConveYour is the ultimate marketing platform for speakers, thought leaders, authors, bloggers, and infopreneurs. 
 
-## Why ConveYour?
+= Why ConveYour? =
 
 - Use our light-weight LMS (learning management system) to turn you offline content into a gamified mobile engagement tool.
 - Use your new mobile learning course to attract prospects, capture attendee info, or sell review courses to your existing customer base
@@ -21,7 +21,8 @@ ConveYour is the ultimate marketing platform for speakers, thought leaders, auth
 - Boost customer success in your information products through ConveYour Analytics. Track the behavior of your Wordpress users through your 
 e-learning course (on CoursePress).
 
-## ConveYour for Wordpress
+= ConveYour for Wordpress = 
+
 Let's face it, user management in Wordpress doesn't have a lot to offer when it comes to organizing, segmenting, or messaging users. It's not meant to be used as a "user management system" or CRM really. 
 
 With ConveYour for Wordpress, your Wordpress users will automatically be mirrored in ConveYour. You can start taking advantage of ConveYour's contact management & messaging features immediately without manual imports from Wordpress. Your ConveYour contact list will always be up to date. 
@@ -30,22 +31,24 @@ With ConveYour for Wordpress, your Wordpress users will automatically be mirrore
 - Keeps your Wordpress user info up to date in ConveYour
 - Tracks when WP users log in
 
-## Setup
+= Setup = 
+
 Setting up the ConveYour for Wordpress plugin is a super easy. 
 
-### 1) Get your ConveYour API credentials
+**Get your ConveYour API credentials**
 
 ![ConveYour API Credentials in Settings](http://throwbocdn.s3.amazonaws.com/docs/conveyour-for-wordpress/analytics-settings.jpg)
 
-### 2) Save your credentials into the plugin's settings page
+**Save your credentials into the plugin's settings page**
 
 ![ConveYour for Wordpress plugin settings page](http://throwbocdn.s3.amazonaws.com/docs/conveyour-for-wordpress/plugin-settings.jpg)
 
-### 3) That's it! 
+**That's it!**
 
 That's all you have to do to start seeing Wordpress users show up in your ConveYour. If you have CoursePress Pro installed in your Wordpress, we will start tracking CoursePress events for each contact! Check out [ConveYour Analytics](http://conveyour.com/analytics) for more information
 
-## Gravity Forms Integration
+= Gravity Forms Integration =
+
 ![Gravity Forms Logo](http://throwbocdn.s3.amazonaws.com/docs/conveyour-for-wordpress/gravity-forms-logo.png) 
 
 _"Advanced Forms for WordPress Websites Just Don't Get Any Easier than [Gravity Forms](http://www.gravityforms.com/)"_
@@ -67,7 +70,8 @@ You can attain your ConveYour Campaign ID simply by grabbing it from the URL whe
 
 ![Your ConveYour campaign id](http://throwbocdn.s3.amazonaws.com/docs/conveyour-for-wordpress/conveyour-campaign-id.jpg)
 
-## CoursePress Pro Integration
+= CoursePress Pro Integration = 
+
 ![CoursePress Pro logo](http://throwbocdn.s3.amazonaws.com/docs/conveyour-for-wordpress/coursepress-pro-logo.jpg) 
 
 Coursepress Pro allows you to quickly create beautiful courses all within WordPress – whether you’re selling or sharing your knowledge, this plugin will save you time and make your work stand out.
