@@ -37,7 +37,7 @@ Setting up the ConveYour for Wordpress plugin is a super easy.
 
 **Get your ConveYour API credentials**
 
-![ConveYour API Credentials in Settings](http://throwbocdn.s3.amazonaws.com/docs/conveyour-for-wordpress/analytics-settings.jpg)
+<img src="http://throwbocdn.s3.amazonaws.com/docs/conveyour-for-wordpress/analytics-settings.jpg"/>
 
 **Save your credentials into the plugin's settings page**
 
