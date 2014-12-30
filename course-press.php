@@ -34,28 +34,38 @@ abstract class Conveyour_CoursePress_Task extends WP_Async_Task
         
         if($completion->unit_all_pages_viewed($unit_id)) {
             conveyour_track($user, 'viewed_all_unit_pages', array(
-                'unit' => $unit->post_title,
                 'course' => $course->post_title,
+                'course_id' => $course->ID,
+                
+                'unit' => $unit->post_title,
+                'unit_id' => $unit->ID,
             ));
         }
         
         if($completion->unit_all_mandatory_answered($unit_id)) {
             conveyour_track($user, 'finished_all_unit_assessments', array(
-                'unit' => $unit->post_title,
                 'course' => $course->post_title,
+                'course_id' => $course->ID,
+                
+                'unit' => $unit->post_title,
+                'unit_id' => $unit->ID,
             ));
         }
         
         if($completion->is_unit_complete($unit_id)) {
             conveyour_track($user, 'finished_unit', array(
-                'unit' => $unit->post_title,
                 'course' => $course->post_title,
+                'course_id' => $course->ID,
+                
+                'unit' => $unit->post_title,
+                'unit_id' => $unit->ID,
             ));
         }
         
         if($completion->is_course_complete()) {
             conveyour_track($user, 'finished_course', array(
                 'course' => $course->post_title,
+                'course_id' => $course->ID,
             ));
         }
     }
@@ -113,7 +123,6 @@ class Conveyour_CoursePress_Track_Task extends WP_Async_Task
         
         if(isset($data['course_id'])) {
             $data['course'] = get_the_title($data['course_id']);
-            unset($data['course_id']);
         }
         
         conveyour_track($student, $this->event, $data);
@@ -178,8 +187,12 @@ class Conveyour_CoursePress_Module_Task extends Conveyour_CoursePress_Task
         conveyour_track($user, 'finished_assessment', array(
             //answer is used already
             'content' => $answer,
-            'unit' => $unit->post_title,
+            
             'course' => $course->post_title,
+            'course_id' => $course->ID,
+            
+            'unit' => $unit->post_title,
+            'unit_id' => $unit->ID,
         ));
         
         $this->completion($student_id, $unit_id);
@@ -247,6 +260,7 @@ class Conveyour_CoursePress_AddMeta_Task extends Conveyour_CoursePress_Task
             
         conveyour_track($user, 'started_course', array(
             'course' => $course->post_title,
+            'course_id' => $course->ID,
         ));
     }
     
@@ -269,7 +283,10 @@ class Conveyour_CoursePress_AddMeta_Task extends Conveyour_CoursePress_Task
             
         conveyour_track($user, 'started_unit', array(
             'course' => $course->post_title,
+            'course_id' => $course->ID,
+            
             'unit' => $unit->post_title,
+            'unit_id' => $unit->ID,
         ));
     }
 }

@@ -73,3 +73,15 @@ Integrating ConveYour into your CoursePress course means you will have the power
 Example.. "Send an automated email to reengage users who have completed unit 1 over 3 days ago but they haven't started unit 2 yet. "
 
 ![ConveYour CoursePress Pro funnel](http://conveyour.com/img/site/analytics/elearning-course-funnel.png)
+
+== Screenshots ==
+
+1. Get API credentials from [ConveYour](http://conveyour.com/)
+2. Save API credentials into the plugin's settings page
+3. Setup Gravity Form as a [ConveYour Campaign](http://conveyour.com/help?category=campaigns) registration form!
+4. Track Coursepress Pro events and view activity on [ConveYour](http://conveyour.com/)
+
+== Changelog ==
+
+= 1.1.0 =
+* add unit_id & course_id to event properties
