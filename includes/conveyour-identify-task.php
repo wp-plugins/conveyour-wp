@@ -1,6 +1,6 @@
 <?php
 
-class Conveyour_Identify_Task extends WP_Async_Task
+class Conveyour_Identify_Task extends Conveyour_Async_Task
 {
     /**
      * @var string

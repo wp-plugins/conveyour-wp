@@ -1,6 +1,6 @@
 <?php
 
-abstract class Conveyour_CoursePress_Task extends WP_Async_Task
+abstract class Conveyour_CoursePress_Task extends Conveyour_Async_Task
 {
     protected function is_started_course($meta_key)
     {
@@ -74,7 +74,7 @@ abstract class Conveyour_CoursePress_Task extends WP_Async_Task
 /**
  * coursepress track events which related to do_action
  */
-class Conveyour_CoursePress_Track_Task extends WP_Async_Task
+class Conveyour_CoursePress_Track_Task extends Conveyour_Async_Task
 {
     protected $params = array();
     protected $event;

@@ -3,7 +3,7 @@
 /**
  * listen to the event which will be triggered when form is submitted
  */
-class Conveyour_Gform_Task extends WP_Async_Task
+class Conveyour_Gform_Task extends Conveyour_Async_Task
 {
     protected $action = 'gform_after_submission';
 

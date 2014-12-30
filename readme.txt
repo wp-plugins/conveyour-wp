@@ -83,5 +83,8 @@ Example.. "Send an automated email to reengage users who have completed unit 1 o
 
 == Changelog ==
 
+= 1.2.0 =
+* fixed issue that multiple questions can not be tracked
+
 = 1.1.0 =
 * add unit_id & course_id to event properties

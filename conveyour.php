@@ -2,7 +2,7 @@
 /*
 Plugin Name: ConveYour for WordPress
 Description: Integrate <a href="http://conveyour.com">ConveYour</a> into Wordpress website.
-Version: 1.1.0
+Version: 1.2.0
 Author: Clive Young
 
 	-----------
@@ -48,6 +48,7 @@ define('CONVEYOUR_PLUGIN_DIR', plugin_dir_path(__FILE__));
 if(!class_exists('WP_Async_Task')) {
     require_once(CONVEYOUR_PLUGIN_DIR . '/wp-async-task.php');
 }
+require_once(CONVEYOUR_PLUGIN_DIR . '/includes/conveyour-async.php');
 
 require_once(CONVEYOUR_PLUGIN_DIR . '/includes/conveyour-client.php');
 require_once(CONVEYOUR_PLUGIN_DIR . '/includes/functions.php');

@@ -109,7 +109,7 @@ function conveyour_domain_sanitize($value, $option) {
     if(strpos($value, '.') === false) {
         return $value . '.conveyour.com';
     }
-    if(preg_match('/(\w+)\.conveyour\.(com|app|im)/', $value, $matches)) {
+    if(preg_match('/(\w+)\.conveyour\.(com|app|im|io)/', $value, $matches)) {
         return $matches[1] . '.conveyour.' . $matches[2];
     }
     

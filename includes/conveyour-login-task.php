@@ -1,6 +1,6 @@
 <?php
 
-class Conveyour_Login_Task extends WP_Async_Task
+class Conveyour_Login_Task extends Conveyour_Async_Task
 {
     protected $action = 'set_logged_in_cookie';
     
