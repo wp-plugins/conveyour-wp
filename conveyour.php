@@ -2,7 +2,7 @@
 /*
 Plugin Name: ConveYour for WordPress
 Description: Integrate <a href="http://conveyour.com">ConveYour</a> into Wordpress website.
-Version: 1.2.0
+Version: 1.3.0
 Author: Clive Young
 
 	-----------
@@ -68,3 +68,14 @@ require_once(CONVEYOUR_PLUGIN_DIR . '/course-press.php');
 
 //gravity forms
 require_once(CONVEYOUR_PLUGIN_DIR . '/gravity-forms.php');
+
+//short code
+add_shortcode('conveyour_track', 'conveyour_track_shortcode');
+
+if(!shortcode_exists('is_get_request')) {
+    add_shortcode('is_get_request', 'is_get_request_shortcode');
+}
+
+if(!shortcode_exists('is_post_request')) {
+    add_shortcode('is_post_request', 'is_post_request_shortcode');
+}

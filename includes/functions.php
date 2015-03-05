@@ -77,7 +77,11 @@ function conveyour_track($user, $event, $properties = array()) {
         return;
     }
     
-    $email = $user->user_email;
+    if(is_string($user)) {
+        $email = $user;
+    } else {
+        $email = $user->user_email;
+    }
     if(!$email) {
         return;
     }
@@ -169,4 +173,37 @@ function conveyour_menu_page() {
 </div>
 
 <?php
+}
+
+function conveyour_track_shortcode($atts) {
+    $id = cy_array_get($atts, 'id');
+    if($id) {
+        unset($atts['id']);
+    }
+    if(!$id) {
+        $id = wp_get_current_user();
+    }
+    $event = cy_array_get($atts, 'event');
+    if($event) {
+        unset($atts['event']);
+    }
+    conveyour_track($id, $event, $atts);
+    
+    return '';
+}
+
+function is_get_request_shortcode($atts, $content = null) {
+    if(cy_array_get($_SERVER, 'REQUEST_METHOD') !== 'GET') {
+        return '';
+    }
+    
+    return do_shortcode($content);
+}
+
+function is_post_request_shortcode($atts, $content = null) {
+    if(cy_array_get($_SERVER, 'REQUEST_METHOD') !== 'POST') {
+        return '';
+    }
+    
+    return do_shortcode($content);
 }

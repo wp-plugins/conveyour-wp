@@ -74,6 +74,14 @@ Example.. "Send an automated email to reengage users who have completed unit 1 o
 
 ![ConveYour CoursePress Pro funnel](http://conveyour.com/img/site/analytics/elearning-course-funnel.png)
 
+= Shortcodes = 
+
+place `[conveyour_track id="user@example.com" event="success" property="value" property2="value2"]` in your post or page, it will send a tracking request when a user visits this page.
+
+- id is optional, if it is not specified, email of current user will be used.
+- feel free to set as many properties as you want.
+- you can do something like `[is_post_request] [conveyour_track] [/is_post_request]` to send tracking request when user submitting a form.
+
 == Screenshots ==
 
 1. Get API credentials from [ConveYour](http://conveyour.com/)
@@ -82,6 +90,12 @@ Example.. "Send an automated email to reengage users who have completed unit 1 o
 4. Track Coursepress Pro events and view activity on [ConveYour](http://conveyour.com/)
 
 == Changelog ==
+
+= 1.3.0 =
+
+* added a shortcode `conveyour_track` to send tracking request from a post or a page
+
+* added two shortcode helpers `is_get_request` and `is_post_request`, it helps user to send tracking request from a form of a page
 
 = 1.2.0 =
 * fixed issue that multiple questions can not be tracked
