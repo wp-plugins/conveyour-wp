@@ -94,7 +94,6 @@ place `[conveyour_track id="user@example.com" event="success" property="value" p
 = 1.3.0 =
 
 * added a shortcode `conveyour_track` to send tracking request from a post or a page
-
 * added two shortcode helpers `is_get_request` and `is_post_request`, it helps user to send tracking request from a form of a page
 
 = 1.2.0 =
