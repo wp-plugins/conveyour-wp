@@ -109,7 +109,7 @@ function reigster_conveyour_settings() {
 	register_setting( 'conveyour-settings-group', 'conveyour_token' );
 }
 
-function conveyour_domain_sanitize($value, $option) {
+function conveyour_domain_sanitize($value) {
     if(strpos($value, '.') === false) {
         return $value . '.conveyour.com';
     }
