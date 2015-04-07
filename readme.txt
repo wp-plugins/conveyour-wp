@@ -91,6 +91,10 @@ place `[conveyour_track id="user@example.com" event="success" property="value" p
 
 == Changelog ==
 
+= 1.3.1 =
+
+* fixed bug of conveyour_domain_sanitize function
+
 = 1.3.0 =
 
 * added a shortcode `conveyour_track` to send tracking request from a post or a page
