@@ -64,10 +64,27 @@ function conveyour_identify($identify, $traits) {
     if(!$client || !$identify) {
         return;
     }
+
+    $_traits = array();
+    foreach($traits as $key=>$value) {
+        $prefix = substr($key, 0, 1);
+        if($prefix === '+' || $prefix === '-') {
+            if(!is_array($value)) {
+                $value = preg_split('/[^-\w]+/', $value, -1, PREG_SPLIT_NO_EMPTY);
+            }
+            $operator = $prefix === '+' ? 'add' : 'remove';
+
+            $_traits[substr($key, 1)] = array(
+                $operator => $value
+            );
+        } else {
+            $_traits[$key] = $value;
+        }
+    }
     
     $client->analytics->post('identify', array(
         'identify' => $identify,
-        'traits' => $traits,
+        'traits' => $_traits,
     ));
 }
 

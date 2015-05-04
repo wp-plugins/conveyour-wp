@@ -91,6 +91,10 @@ place `[conveyour_track id="user@example.com" event="success" property="value" p
 
 == Changelog ==
 
+= 1.3.2 =
+
+* added a way to add or remove value from list field like tags
+
 = 1.3.1 =
 
 * fixed bug of conveyour_domain_sanitize function
