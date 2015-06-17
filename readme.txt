@@ -91,6 +91,10 @@ place `[conveyour_track id="user@example.com" event="success" property="value" p
 
 == Changelog ==
 
+= 1.3.3 =
+
+* fixed the issue that login event can not be tracked correctly
+
 = 1.3.2 =
 
 * added a way to add or remove value from list field like tags

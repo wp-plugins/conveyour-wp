@@ -2,7 +2,7 @@
 /*
 Plugin Name: ConveYour for WordPress
 Description: Integrate <a href="http://conveyour.com">ConveYour</a> into Wordpress website.
-Version: 1.3.2
+Version: 1.3.3
 Author: Clive Young
 
 	-----------

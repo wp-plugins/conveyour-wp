@@ -7,7 +7,7 @@ class Conveyour_Login_Task extends Conveyour_Async_Task
     protected function prepare_data($data)
     {
         return array(
-            'user_id' => get_current_user_id(),
+            'user_id' => $data[3],
         );
     }
     
