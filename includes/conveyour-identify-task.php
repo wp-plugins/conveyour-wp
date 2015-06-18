@@ -30,6 +30,7 @@ class Conveyour_Identify_Task extends Conveyour_Async_Task
         if(!($user instanceof WP_User) || !$user->ID) {
             throw new Exception;
         }
+
         if(in_array('administrator', $user->roles)) {
             throw new Exception;
         }
@@ -38,8 +39,13 @@ class Conveyour_Identify_Task extends Conveyour_Async_Task
             'email' => $user->user_email,
             'first_name' => $user->user_firstname,
             'last_name' => $user->user_lastname,
+            'roles' => implode(',', $user->roles)
         );
-        
+
+        if( isset($user->membership_level->name) ){
+            $data['membership_level'] = $user->membership_level->name;
+        }
+
         $meta = get_user_meta($user->ID, $this->meta_key, true);
 
         if($this->is_data_expired($meta) || $this->is_data_changed($meta, $data)) {
@@ -65,6 +71,14 @@ class Conveyour_Identify_Task extends Conveyour_Async_Task
             $traits['name'] = $first_name.' '.$last_name;
         }
         
+        if(($value = cy_input_get('roles')) !== null) {
+            $traits['roles'] = $value;
+        }
+        
+        if(($value = cy_input_get('membership_level')) !== null) {
+            $traits['membership_level'] = $value;
+        }
+        
         conveyour_identify($email, $traits);
     }
     
@@ -72,7 +86,8 @@ class Conveyour_Identify_Task extends Conveyour_Async_Task
     {
         $last = cy_array_get($meta, 'timestamp');
         
-        if(!$last || time() - $last > 600) {
+        //fixed this so that identify happens immediately if no timestamp
+        if(!$last ||  ( (time() - $last) > 300) ) {
             return true;
         }
         

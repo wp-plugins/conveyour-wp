@@ -91,6 +91,12 @@ place `[conveyour_track id="user@example.com" event="success" property="value" p
 
 == Changelog ==
 
+= 1.3.4 =
+
+* added more fields to identify
+
+* fixed timestamp issue on identify
+
 = 1.3.3 =
 
 * fixed the issue that login event can not be tracked correctly
